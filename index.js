@@ -8,8 +8,8 @@ WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then(
     }
 );
 
-// Global run function
-window.run = function () {
+// Global submit function
+window.submit = function () {
     let v1 = document.getElementById("val1").value;
     let v2 = document.getElementById("val2").value;
     handle(v1, v2);
