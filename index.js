@@ -9,8 +9,9 @@ WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then(
 );
 
 // Global submit function
+// Sends all input values to Go
 window.submit = function () {
-    let v1 = document.getElementById("val1").value;
-    let v2 = document.getElementById("val2").value;
-    handle(v1, v2);
+    handleInput(
+        document.getElementById("author").value,
+        document.getElementById("title").value);
 }
