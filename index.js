@@ -8,10 +8,31 @@ WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then(
     }
 );
 
+const CORSproxy = "https://corsproxy.io/?"
+
+const SRUprefixes = ["http://sru.gbv.de/hpb?version=2.0", "https://www.unicat.be/sru?version=1.1"]
+
+async function callSRU(prefix, query) {
+    let url = prefix + "&operation=searchRetrieve&query=" + query
+    url = url + "&startRecord=1&maximumRecords=10&recordSchema=dc"
+    url = CORSproxy + url
+    let response = await fetch(url, {
+        method: "GET",
+        headers: {
+            'Content-Type': 'text/plain'
+        }
+    });
+    let text = await response.text();
+    return text
+}
+
 // Global submit function
-// Sends all input values to Go
+// Perform API calls and send response to Go
 window.submit = function () {
-    handleInput(
-        document.getElementById("author").value,
-        document.getElementById("title").value);
+    let author = document.getElementById("author").value;
+    let title = document.getElementById("title").value;
+    let query = author + "%20AND%20" + title;
+    SRUprefixes.forEach(prefix => {
+        callSRU(prefix, query).then(result => handleXML(result))
+    });
 }

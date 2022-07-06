@@ -1,50 +1,40 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
-	"io/ioutil"
-	"net/http"
 	"syscall/js"
+
+	"github.com/clbanning/mxj"
 )
 
-// Handle JS input
-func handleInput(this js.Value, input []js.Value) interface{} {
-	author := js.ValueOf(input[0]).String()
-	title := js.ValueOf(input[1]).String()
-	query := author + "%20AND%20" + title
-	result, err := getUnicat(query)
+// Handle XML response from JS
+func handleXML(this js.Value, table []js.Value) interface{} {
+	response := []byte(js.ValueOf(table[0]).String())
+	mv, err := mxj.NewMapXml(response)
 	if err != nil {
-		panic(err)
+		return fmt.Errorf("cannot parse XML: %v", err)
 	}
-	setResult(result)
+	result, err := json.Marshal(mv)
+	if err != nil {
+		return fmt.Errorf("invalid JSON: %v", err)
+	}
+
+	// parse result in html table
+	addToResult(string(result))
 	return nil
 }
 
 // Register JS function callbacks
 func registerCallbacks() {
-	js.Global().Set("handleInput", js.FuncOf(handleInput))
+	js.Global().Set("handleXML", js.FuncOf(handleXML))
 }
 
-func getUnicat(query string) (string, error) {
-	url := "https://www.unicat.be/sru?version=1.1&operation=searchRetrieve&query=" + query + "&recordSchema=dc"
-	response, err := http.Get(url)
-	if err != nil {
-		return "", err
-	}
-	defer response.Body.Close()
-
-	content, err := ioutil.ReadAll(response.Body)
-	if err != nil {
-		return "", err
-	}
-
-	return string(content), nil
-}
-
-// Manipulate DOM to show output
-func setResult(result string) {
-	output := js.Global().Get("document").Call("getElementById", "result")
-	output.Set("innerText", result)
+// Show result in "result" table
+func addToResult(result string) {
+	table := js.Global().Get("document").Call("getElementById", "result")
+	result = table.Get("innerText").String() + result
+	table.Set("innerText", result)
 }
 
 func main() {
