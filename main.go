@@ -9,8 +9,9 @@ import (
 )
 
 // Handle XML response from JS
-func handleXML(this js.Value, table []js.Value) interface{} {
-	response := []byte(js.ValueOf(table[0]).String())
+func handleXML(this js.Value, args []js.Value) interface{} {
+	prefix := js.ValueOf(args[0]).String()
+	response := []byte(js.ValueOf(args[1]).String())
 	mv, err := mxj.NewMapXml(response)
 	if err != nil {
 		return fmt.Errorf("cannot parse XML: %v", err)
@@ -21,7 +22,7 @@ func handleXML(this js.Value, table []js.Value) interface{} {
 	}
 
 	// parse result in html table
-	addToResult(string(result))
+	addToResult(prefix, string(result))
 	return nil
 }
 
@@ -31,10 +32,10 @@ func registerCallbacks() {
 }
 
 // Show result in "result" table
-func addToResult(result string) {
+func addToResult(prefix string, result string) {
 	table := js.Global().Get("document").Call("getElementById", "result")
-	result = table.Get("innerText").String() + result
-	table.Set("innerText", result)
+	result = table.Get("innerHTML").String() + "<tr><td>" + prefix + "</td><td>" + result + "</td></tr>"
+	table.Set("innerHTML", result)
 }
 
 func main() {
