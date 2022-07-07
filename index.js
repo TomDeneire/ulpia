@@ -20,21 +20,6 @@ WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then(
 //     document.body.removeChild(element);
 // }
 
-async function callSRU(url, query) {
-    const CORSproxy = "https://corsproxy.io/?"
-    url = `${url}&operation=searchRetrieve&query=${query}&startRecord=1&maximumRecords=10`
-    console.log(url);
-    url = CORSproxy + url
-    let response = await fetch(url, {
-        method: "GET",
-        headers: {
-            'Content-Type': 'text/plain'
-        }
-    });
-    let text = await response.text();
-    return text
-}
-
 // Global submit function
 // Perform API calls and send response to Go
 window.submit = function () {

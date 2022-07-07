@@ -5,12 +5,14 @@ import (
 	"fmt"
 	"syscall/js"
 
+	uxml "./lib/xml"
+
 	"github.com/clbanning/mxj"
 )
 
 // Handle XML response from JS
 func handleXML(this js.Value, args []js.Value) interface{} {
-	prefix := js.ValueOf(args[0]).String()
+	identifier := js.ValueOf(args[0]).String()
 	response := []byte(js.ValueOf(args[1]).String())
 	mv, err := mxj.NewMapXml(response)
 	if err != nil {
@@ -21,8 +23,9 @@ func handleXML(this js.Value, args []js.Value) interface{} {
 		return fmt.Errorf("invalid JSON: %v", err)
 	}
 
-	// parse result in html table
-	addToResult(prefix, string(result))
+	// parse results according to identifier (XML structure not always the same)
+	_ = uxml.ParseXML(response)
+	addToResult(identifier, string(result))
 	return nil
 }
 
@@ -32,9 +35,9 @@ func registerCallbacks() {
 }
 
 // Show result in "result" table
-func addToResult(prefix string, result string) {
+func addToResult(identifier string, result string) {
 	table := js.Global().Get("document").Call("getElementById", "result")
-	result = table.Get("innerHTML").String() + "<tr><td>" + prefix + "</td><td>" + result + "</td></tr>"
+	result = table.Get("innerHTML").String() + "<tr><td>" + identifier + "</td><td>" + result + "</td></tr>"
 	table.Set("innerHTML", result)
 }
 
