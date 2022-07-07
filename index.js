@@ -14,11 +14,11 @@ const SRUprefixes = [
     "https://sru.gbv.de/hpb?version=2.0",
     "https://www.unicat.be/sru?version=1.1",
     "https://fu-berlin.alma.exlibrisgroup.com/view/sru/49KOBV_FUB?version=1.2",
-    "http://catalogue.bnf.fr/api/SRU?version=1.2",
-    "http://services.dnb.de/sru/dnb?version=1.1",
+    "https://catalogue.bnf.fr/api/SRU?version=1.2",
+    "https://services.dnb.de/sru/dnb?version=1.1",
     // "http://gso.gbv.de/sru/DB=2.1/?version=1.1",
     // "http://gita.grainger.uiuc.edu/registry/sru/sru.asp?version=1.1",
-    "http://jsru.kb.nl/sru?version=1.1",
+    "https://jsru.kb.nl/sru?version=1.2",
     // "http://sru.bibsys.no/search/biblio?version=1.1",
     // "http://bvpb.mcu.es/i18n/sru/sru.cmd?version=1.1",
     // "http://lx2.loc.gov:210/LCDB?version=1.1"
@@ -51,10 +51,18 @@ window.submit = function () {
     SRUprefixes.forEach(prefix => {
         let query = "";
         if (prefix.includes("fu-berlin")) {
-            query = `creator%20=%20${author}%20AND%20title%20=%20${title}`
-        } else {
-            query = author + "%20AND%20" + title
+            query = `creator%20=%20${author}%20AND%20title%20=%20${title}`;
+        }
+        else if (prefix.includes("catalogue.bnf")) {
+            query = `bib.author%20=%20${author}%20AND%20bib.title%20=%20${title}`;
+        }
+        else if (prefix.includes("jsru.kb.nl")) {
+            query = `dc.creator%20=%20${author}%20AND%20dc.title%20=%20${title}`;
+        }
+        else {
+            query = author + "%20AND%20" + title;
         };
+        console.log("DEBUG", prefix, query);
         callSRU(prefix, query).then(result => handleXML(prefix, result))
     });
 }
