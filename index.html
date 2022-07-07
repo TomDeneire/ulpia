@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Ulpia</title>
     <script src="wasm_exec.js"></script>
+    <script src="sru.js"></script>
     <script src="index.js"></script>
 
 </head>
@@ -14,12 +15,23 @@
         Ulpia
     </h1>
     <div>
-        <input type="text" id="author" value="lipsius" />
+        <table>
+            <tr>
+                <td>Author</td>
+                <td><input type="text" id="author" value="lipsius" /></td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td><input type="text" id="title" value="admiranda" /></td>
+            </tr>
+            <tr>
+                <td>Year</td>
+                <td><input type="text" id="year" value="1598" /></td>
+            </tr>
+        </table>
     </div>
     <div>
-        <input type="text" id="title" value="analecta" />
-    </div>
-    <div>
+        <p></p>
         <button onClick="submit();">Submit</button>
     </div>
     <div>

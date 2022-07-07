@@ -40,7 +40,6 @@ func addToResult(prefix string, result string) {
 
 func main() {
 	c := make(chan struct{}, 0)
-	fmt.Println("WASM Go Initialized")
 	registerCallbacks()
 	<-c
 }
