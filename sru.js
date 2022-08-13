@@ -4,6 +4,7 @@ function getSRUservers() {
         {
             "name": "hpb",
             "url": "https://sru.gbv.de/hpb?version=2.0&recordSchema=dc",
+            "explain": "https://sru.gbv.de/hpb?version=2.0&operation=explain",
             "indices":
             {
                 "author": "dc.creator",
@@ -14,6 +15,7 @@ function getSRUservers() {
         {
             "name": "unicat",
             "url": "https://www.unicat.be/sru?version=1.1&recordSchema=dc",
+            "explain": "https://www.unicat.be/sru?version=1.1&operation=explain",
             "indices":
             {
                 "author": "author",
@@ -24,6 +26,7 @@ function getSRUservers() {
         {
             "name": "fu-berlin",
             "url": "https://fu-berlin.alma.exlibrisgroup.com/view/sru/49KOBV_FUB?version=1.2&recordSchema=dc",
+            "explain": "https://fu-berlin.alma.exlibrisgroup.com/view/sru/49KOBV_FUB?version=1.2&operation=explain",
             "indices":
             {
                 "author": "alma.creator",
@@ -34,6 +37,7 @@ function getSRUservers() {
         {
             "name": "bnf",
             "url": "https://catalogue.bnf.fr/api/SRU?version=1.2&recordSchema=dc",
+            "explain": "https://catalogue.bnf.fr/api/SRU?version=1.2&operation=explain",
             "indices":
             {
                 "author": "bib.author",
@@ -44,6 +48,7 @@ function getSRUservers() {
         {
             "name": "dnb",
             "url": "https://services.dnb.de/sru/dnb?version=1.1",
+            "explain": "https://services.dnb.de/sru/dnb?version=1.1&operation=explain",
             "indices":
             {
                 "author": "dc.creator",

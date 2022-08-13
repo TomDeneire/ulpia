@@ -9,10 +9,12 @@ import (
 
 // Handle XML response from JS
 func handleXML(this js.Value, args []js.Value) interface{} {
-	source := js.ValueOf(args[0]).String()
-	response := []byte(js.ValueOf(args[1]).String())
+	var source uhtml.Source
+	source.Name = js.ValueOf(args[0]).String()
+	source.Explain = js.ValueOf(args[1]).String()
+	response := []byte(js.ValueOf(args[2]).String())
 
-	result, _ := uxml.ParseXML(response, source)
+	result, _ := uxml.ParseXML(response, source.Name)
 	uhtml.AddToResult(source, result)
 
 	return nil

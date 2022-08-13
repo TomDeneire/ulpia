@@ -38,6 +38,9 @@ window.submit = function () {
         if (year != "") {
             query = `${query}%20AND%20${server["indices"]["year"]}%20=%20${year}`
         };
-        callSRU(server["url"], query).then(result => handleXML(server["name"], result));
+        callSRU(server["url"], query).then(result => handleXML(
+            server["name"],
+            server["explain"],
+            result));
     })
 }

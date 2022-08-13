@@ -21,3 +21,15 @@ Thanks to the integration of Go and WebAssembly, I could use Go for the "back-en
 ### JavaScript
 
 The actual request is done in JavaScript, making full use of the language's asynchronicity and speed.
+
+## Data
+
+Ulpia currently queries SRU servers of the following datasets:
+
+    - CERL Heritage of the Printed Book
+    - Bibliothèque national de France
+    - Deutsche Nationalbibliothek
+    - Unicat -- The Union Catalogue of Belgian Libraries
+    - Freie Universität Berlin
+
+If you know of any other SRU servers that could be used for this project (provided they do not block CORS proxies), please let me know!
