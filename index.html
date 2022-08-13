@@ -7,36 +7,40 @@
     <script src="wasm_exec.js"></script>
     <script src="sru.js"></script>
     <script src="index.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>
-        Ulpia
-    </h1>
-    <div>
-        <table>
-            <tr>
-                <td>Author</td>
-                <td><input type="text" id="author" value="lipsius" /></td>
-            </tr>
-            <tr>
-                <td>Title</td>
-                <td><input type="text" id="title" value="admiranda" /></td>
-            </tr>
-            <tr>
-                <td>Year</td>
-                <td><input type="text" id="year" value="1598" /></td>
-            </tr>
-        </table>
-    </div>
-    <div>
-        <p></p>
-        <button onClick="submit();">Submit</button>
-    </div>
-    <div>
-        <table id="result" class="table table-bordered">
-        </table>
+    <div class="card-body">
+        <h1>
+            Ulpia
+        </h1>
+        <div>
+            <table class="table">
+                <tr>
+                    <td>Author</td>
+                    <td><input type="text" id="author" value="lipsius" /></td>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td><input type="text" id="title" value="admiranda" /></td>
+                </tr>
+                <tr>
+                    <td>Year</td>
+                    <td><input type="text" id="year" value="1598" /></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p></p>
+            <button onClick="submit();" class="btn-outline-secondary">Submit</button>
+            <p></p>
+        </div>
+        <div>
+            <table id="result" class="table-sm table-bordered">
+            </table>
+        </div>
     </div>
 </body>
 
