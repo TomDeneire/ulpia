@@ -23,7 +23,7 @@ function getSRUservers() {
         },
         {
             "name": "fu-berlin",
-            "url": "https://fu-berlin.alma.exlibrisgroup.com/view/sru/49KOBV_FUB?version=1.2",
+            "url": "https://fu-berlin.alma.exlibrisgroup.com/view/sru/49KOBV_FUB?version=1.2&recordSchema=dc",
             "indices":
             {
                 "author": "alma.creator",
@@ -33,7 +33,7 @@ function getSRUservers() {
         },
         {
             "name": "bnf",
-            "url": "https://catalogue.bnf.fr/api/SRU?version=1.2",
+            "url": "https://catalogue.bnf.fr/api/SRU?version=1.2&recordSchema=dc",
             "indices":
             {
                 "author": "bib.author",

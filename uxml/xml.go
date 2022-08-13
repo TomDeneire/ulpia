@@ -18,76 +18,166 @@ func ParseXML(data []byte, source string) (Result, error) {
 
 	if source == "dnb" {
 		var response DNB
-		_ = xml.Unmarshal(data, &response)
+		err := xml.Unmarshal(data, &response)
+		if err != nil {
+			return result, err
+		}
 		for _, record := range response.Records.Record {
-			result.Titles = append(result.Titles, record.RecordData.RDF.Description.Title.Text)
-			identifiers := ""
-			for _, identifier := range record.RecordData.RDF.Description.Identifier {
-				identifiers = identifiers + "\n" + identifier.Text
-			}
-			result.Identifiers = append(result.Identifiers, identifiers)
-			result.Dates = append(result.Dates, record.RecordData.RDF.Description.Issued.Text)
-			result.Authors = append(result.Authors, record.RecordData.RDF.Description.P60327.Text)
-			result.Imprints = append(result.Imprints, record.RecordData.RDF.Description.P60333.Text)
+			result.Titles = append(result.Titles,
+				record.RecordData.RDF.Description.Title.Text)
+
+			result.Identifiers = append(result.Identifiers,
+				loopConCatS3(record.RecordData.RDF.Description.Identifier))
+
+			result.Dates = append(result.Dates,
+				record.RecordData.RDF.Description.Issued.Text)
+
+			result.Authors = append(result.Authors,
+				record.RecordData.RDF.Description.P60327.Text)
+
+			result.Imprints = append(result.Imprints,
+				record.RecordData.RDF.Description.P60333.Text)
 		}
 		return result, nil
 	} else if source == "hpb" {
 		var response HPB
-		_ = xml.Unmarshal(data, &response)
+		err := xml.Unmarshal(data, &response)
+		if err != nil {
+			return result, err
+		}
 		for _, record := range response.Records.Record {
 
-			identifiers := ""
-			for _, identifier := range record.RecordData.Dc.Identifier {
-				identifiers = identifiers + "\n" + identifier.Text
-			}
-			result.Identifiers = append(result.Identifiers, identifiers)
+			result.Identifiers = append(result.Identifiers,
+				loopConCatS(record.RecordData.Dc.Identifier))
 
-			titles := ""
-			for _, title := range record.RecordData.Dc.Title {
-				titles = titles + "\n" + title.Text
-			}
-			result.Titles = append(result.Titles, titles)
+			result.Titles = append(result.Titles,
+				loopConCatS(record.RecordData.Dc.Title))
 
-			dates := ""
-			for _, date := range record.RecordData.Dc.Date {
-				dates = dates + "\n" + date.Text
-			}
-			result.Dates = append(result.Dates, dates)
+			result.Dates = append(result.Dates,
+				loopConCatS(record.RecordData.Dc.Date))
 
-			authors := ""
-			for _, author := range record.RecordData.Dc.Contributor {
-				authors = authors + "\n" + author.Text
-			}
-			result.Authors = append(result.Authors, authors)
+			result.Authors = append(result.Authors,
+				loopConCatS2(record.RecordData.Dc.Contributor))
 
-			result.Imprints = append(result.Imprints, record.RecordData.Dc.Publisher.Text)
+			result.Imprints = append(result.Imprints,
+				record.RecordData.Dc.Publisher.Text)
 		}
 		return result, nil
 	} else if source == "unicat" {
 		var response Unicat
-		_ = xml.Unmarshal(data, &response)
+		err := xml.Unmarshal(data, &response)
+		if err != nil {
+			return result, err
+		}
 		for _, record := range response.Records.Record {
 
-			identifiers := ""
-			for _, identifier := range record.RecordData.Dc.Identifier {
-				identifiers = identifiers + "\n" + identifier
-			}
-			result.Identifiers = append(result.Identifiers, identifiers)
+			result.Identifiers = append(result.Identifiers,
+				loopConCat(record.RecordData.Dc.Identifier))
 
-			result.Titles = append(result.Titles, record.RecordData.Dc.Title)
+			result.Titles = append(result.Titles,
+				record.RecordData.Dc.Title)
 
-			result.Dates = append(result.Dates, record.RecordData.Dc.Date)
+			result.Dates = append(result.Dates,
+				record.RecordData.Dc.Date)
 
-			authors := ""
-			for _, author := range record.RecordData.Dc.Creator {
-				authors = authors + "\n" + author
-			}
-			result.Authors = append(result.Authors, authors)
+			result.Authors = append(result.Authors,
+				loopConCat(record.RecordData.Dc.Creator))
 
-			result.Imprints = append(result.Imprints, record.RecordData.Dc.Publisher)
+			result.Imprints = append(result.Imprints,
+				record.RecordData.Dc.Publisher)
+		}
+		return result, nil
+	} else if source == "fu-berlin" {
+		var response FUBerlin
+		err := xml.Unmarshal(data, &response)
+		if err != nil {
+			return result, err
+		}
+		for _, record := range response.Records.Record {
+			result.Identifiers = append(result.Identifiers,
+				loopConCat(record.RecordData.Dc.Identifier))
+
+			result.Titles = append(result.Titles,
+				loopConCat(record.RecordData.Dc.Title))
+
+			result.Dates = append(result.Dates,
+				loopConCat(record.RecordData.Dc.Date))
+
+			result.Authors = append(result.Authors,
+				loopConCat(record.RecordData.Dc.Contributor))
+
+			result.Imprints = append(result.Imprints,
+				loopConCat(record.RecordData.Dc.Publisher))
+
+		}
+		return result, nil
+	} else if source == "bnf" {
+		var response BNF
+		err := xml.Unmarshal(data, &response)
+		if err != nil {
+			return result, err
+		}
+		for _, record := range response.Records.Record {
+			result.Identifiers = append(result.Identifiers,
+				record.RecordData.Dc.Identifier)
+
+			result.Titles = append(result.Titles,
+				record.RecordData.Dc.Title)
+
+			result.Dates = append(result.Dates,
+				record.RecordData.Dc.Date)
+
+			result.Authors = append(result.Authors,
+				record.RecordData.Dc.Creator)
+
+			result.Imprints = append(result.Imprints,
+				loopConCat(record.RecordData.Dc.Publisher))
+
 		}
 		return result, nil
 	}
 
 	return result, nil
+}
+
+func loopConCat(data []string) string {
+	var result string
+	for _, item := range data {
+		result += "\n" + item
+	}
+	return result
+}
+
+func loopConCatS(data []struct {
+	Text  string "xml:\",chardata\""
+	Dc    string "xml:\"dc,attr\""
+	SrwDc string "xml:\"srw_dc,attr\""
+}) string {
+	var result string
+	for _, item := range data {
+		result += "\n" + item.Text
+	}
+	return result
+}
+
+func loopConCatS2(data []struct {
+	Text string "xml:\",chardata\""
+	Dc   string "xml:\"dc,attr\""
+}) string {
+	var result string
+	for _, item := range data {
+		result += "\n" + item.Text
+	}
+	return result
+}
+
+func loopConCatS3(data []struct {
+	Text     string "xml:\",chardata\""
+	Datatype string "xml:\"datatype,attr\""
+}) string {
+	var result string
+	for _, item := range data {
+		result += "\n" + item.Text
+	}
+	return result
 }
