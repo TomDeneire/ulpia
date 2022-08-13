@@ -3,7 +3,7 @@ function getSRUservers() {
     return [
         {
             "name": "hpb",
-            "url": "https://sru.gbv.de/hpb?version=2.0",
+            "url": "https://sru.gbv.de/hpb?version=2.0&recordSchema=dc",
             "indices":
             {
                 "author": "dc.creator",
@@ -13,7 +13,7 @@ function getSRUservers() {
         },
         {
             "name": "unicat",
-            "url": "https://www.unicat.be/sru?version=1.1",
+            "url": "https://www.unicat.be/sru?version=1.1&recordSchema=dc",
             "indices":
             {
                 "author": "author",

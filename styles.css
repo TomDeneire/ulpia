@@ -1,0 +1,8 @@
+.result table {
+    border-collapse: collapse;
+    border: 1px solid #FF0000;
+}
+
+.result table td {
+    border: 1px solid #FF0000;
+}
