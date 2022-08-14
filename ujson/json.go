@@ -57,6 +57,28 @@ func ParseJSON(data []byte, source string) (uhtml.Result, error) {
 					tools.LoopConCat(record.Publisher))
 		}
 		return result, nil
+	} else if source == "googlebooks" {
+		var response GoogleBooks
+		err := json.Unmarshal(data, &response)
+		if err != nil {
+			return result, err
+		}
+		for _, record := range response.Items {
+			result.Titles = append(result.Titles,
+				record.VolumeInfo.Title)
+			result.Identifiers = append(result.Identifiers,
+				record.ID)
+
+			result.Dates = append(result.Dates,
+				record.VolumeInfo.PublishedDate)
+
+			result.Authors = append(result.Authors,
+				tools.LoopConCat(record.VolumeInfo.Authors))
+
+			result.Imprints = append(result.Imprints,
+				record.VolumeInfo.Publisher)
+		}
+		return result, nil
 	}
 
 	return result, nil

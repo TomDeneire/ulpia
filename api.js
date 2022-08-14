@@ -79,10 +79,21 @@ function getAPIs() {
             "explain": "https://openlibrary.org",
             "type": "q",
             "format": "json"
+        },
+        {
+            "name": "googlebooks",
+            "url": "https://www.googleapis.com/books/v1/volumes?",
+            "explain": "https://books.google.com/",
+            "indices":
+            {
+                "author": "inauthor",
+                "title": "intitle",
+            },
+            "type": "q",
+            "format": "json"
         }
     ]
 }
-
 // "http://gso.gbv.de/sru/DB=2.1/?version=1.1"
 // "http://gita.grainger.uiuc.edu/registry/sru/sru.asp?version=1.1",
 // "https://jsru.kb.nl/sru/sru?version=1.1"
@@ -103,7 +114,6 @@ async function callAPI(server, query) {
 
         case "q": url = `${server["url"]}&q=${query}`
             break;
-
 
         default: url = ""
     }

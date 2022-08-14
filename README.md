@@ -30,8 +30,9 @@ Ulpia currently queries APIs (especially SRU servers) of the following datasets:
     - Bibliothèque national de France
     - Deutsche Nationalbibliothek
     - Unicat -- The Union Catalogue of Belgian Libraries
-    - Freie Universität Berlin
+    - Google Books
     - Europeana
     - OpenLibrary
+    - Freie Universität Berlin
 
 If you know of any other datasets that could be used for this project (provided they do not block CORS proxies), please let me know!

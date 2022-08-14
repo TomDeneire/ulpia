@@ -48,12 +48,20 @@ window.submit = function () {
         } else if ((server["type"] == "query" || (server["type"] == "q"))) {
             if (author != "") {
                 query = author
+                if (server["name"] == "googlebooks") {
+                    query = `inauthor:${query}`
+                };
             };
             if (title != "") {
                 if (query != "") {
                     query = `${query}+`
                 }
-                query = `${query}${title}`
+
+                if (server["name"] == "googlebooks") {
+                    query = `${query}intitle:${title}`
+                } else {
+                    query = `${query}${title}`
+                };
             };
             if (year != "") {
                 if (query != "") {
