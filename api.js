@@ -11,7 +11,8 @@ function getAPIs() {
                 "title": "dc.title",
                 "year": "pica.jvu"
             },
-            "type": "sru"
+            "type": "sru",
+            "format": "xml"
         },
         {
             "name": "unicat",
@@ -23,7 +24,8 @@ function getAPIs() {
                 "title": "title",
                 "year": "year"
             },
-            "type": "sru"
+            "type": "sru",
+            "format": "xml"
         },
         {
             "name": "fu-berlin",
@@ -35,7 +37,8 @@ function getAPIs() {
                 "title": "alma.title",
                 "year": "alma.date"
             },
-            "type": "sru"
+            "type": "sru",
+            "format": "xml"
         },
         {
             "name": "bnf",
@@ -47,7 +50,8 @@ function getAPIs() {
                 "title": "bib.title",
                 "year": "bib.date"
             },
-            "type": "sru"
+            "type": "sru",
+            "format": "xml"
         },
         {
             "name": "dnb",
@@ -59,19 +63,22 @@ function getAPIs() {
                 "title": "dc.title",
                 "year": "dc.date"
             },
-            "type": "sru"
+            "type": "sru",
+            "format": "xml"
         },
         {
             "name": "europeana",
             "url": "https://api.europeana.eu/record/v2/search.json?wskey=apidemo",
             "explain": "https://api.europeana.eu",
-            "indices":
-            {
-                "author": "dc.creator",
-                "title": "dc.title",
-                "year": "dc.date"
-            },
-            "type": "searchapi"
+            "type": "query",
+            "format": "json"
+        },
+        {
+            "name": "openlibrary",
+            "url": "https://openlibrary.org/search.json?",
+            "explain": "https://openlibrary.org",
+            "type": "q",
+            "format": "json"
         }
     ]
 }
@@ -91,8 +98,12 @@ async function callAPI(server, query) {
         case "sru": url = `${server["url"]}&operation=searchRetrieve&query=${query}&startRecord=1&maximumRecords=10`
             break;
 
-        case "searchapi": url = `${server["url"]}&query=${query}`
+        case "query": url = `${server["url"]}&query=${query}`
             break;
+
+        case "q": url = `${server["url"]}&q=${query}`
+            break;
+
 
         default: url = ""
     }

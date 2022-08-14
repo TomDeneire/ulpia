@@ -45,7 +45,7 @@ window.submit = function () {
                 }
                 query = `${query}${server["indices"]["year"]}%20=%20${year}`
             }
-        } else if (server["type"] == "searchapi") {
+        } else if ((server["type"] == "query" || (server["type"] == "q"))) {
             if (author != "") {
                 query = author
             };
@@ -65,7 +65,7 @@ window.submit = function () {
         callAPI(server, query).then(result => handleResponse(
             server["name"],
             server["explain"],
-            server["type"],
+            server["format"],
             result[0],
             result[1]));
     })

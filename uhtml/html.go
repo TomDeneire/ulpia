@@ -7,7 +7,7 @@ import (
 
 type Source struct {
 	Name    string
-	Type    string
+	Format  string
 	Explain string
 }
 
@@ -42,7 +42,7 @@ func AddToResult(source Source, rawQuery string, result Result) {
 		dates := result.Dates[index]
 		title = title
 		html = html +
-			"<tr><td></td><td>" +
+			"<tr><td></td><td></td><td>" +
 			identifiers + "</td><td>" +
 			authors + "</td><td>" +
 			title + "</td><td>" +

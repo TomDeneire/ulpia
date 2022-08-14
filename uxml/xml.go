@@ -3,6 +3,7 @@ package uxml
 import (
 	"encoding/xml"
 
+	tools "tomdeneire.github.io/ulpia/tools"
 	uhtml "tomdeneire.github.io/ulpia/uhtml"
 )
 
@@ -66,7 +67,7 @@ func ParseXML(data []byte, source string) (uhtml.Result, error) {
 		for _, record := range response.Records.Record {
 
 			result.Identifiers = append(result.Identifiers,
-				loopConCat(record.RecordData.Dc.Identifier))
+				tools.LoopConCat(record.RecordData.Dc.Identifier))
 
 			result.Titles = append(result.Titles,
 				record.RecordData.Dc.Title)
@@ -75,7 +76,7 @@ func ParseXML(data []byte, source string) (uhtml.Result, error) {
 				record.RecordData.Dc.Date)
 
 			result.Authors = append(result.Authors,
-				loopConCat(record.RecordData.Dc.Creator))
+				tools.LoopConCat(record.RecordData.Dc.Creator))
 
 			result.Imprints = append(result.Imprints,
 				record.RecordData.Dc.Publisher)
@@ -89,19 +90,19 @@ func ParseXML(data []byte, source string) (uhtml.Result, error) {
 		}
 		for _, record := range response.Records.Record {
 			result.Identifiers = append(result.Identifiers,
-				loopConCat(record.RecordData.Dc.Identifier))
+				tools.LoopConCat(record.RecordData.Dc.Identifier))
 
 			result.Titles = append(result.Titles,
-				loopConCat(record.RecordData.Dc.Title))
+				tools.LoopConCat(record.RecordData.Dc.Title))
 
 			result.Dates = append(result.Dates,
-				loopConCat(record.RecordData.Dc.Date))
+				tools.LoopConCat(record.RecordData.Dc.Date))
 
 			result.Authors = append(result.Authors,
-				loopConCat(record.RecordData.Dc.Contributor))
+				tools.LoopConCat(record.RecordData.Dc.Contributor))
 
 			result.Imprints = append(result.Imprints,
-				loopConCat(record.RecordData.Dc.Publisher))
+				tools.LoopConCat(record.RecordData.Dc.Publisher))
 
 		}
 		return result, nil
@@ -125,21 +126,13 @@ func ParseXML(data []byte, source string) (uhtml.Result, error) {
 				record.RecordData.Dc.Creator)
 
 			result.Imprints = append(result.Imprints,
-				loopConCat(record.RecordData.Dc.Publisher))
+				tools.LoopConCat(record.RecordData.Dc.Publisher))
 
 		}
 		return result, nil
 	}
 
 	return result, nil
-}
-
-func loopConCat(data []string) string {
-	var result string
-	for _, item := range data {
-		result += "\n" + item
-	}
-	return result
 }
 
 func loopConCatS(data []struct {
