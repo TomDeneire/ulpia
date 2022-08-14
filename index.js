@@ -27,20 +27,46 @@ window.submit = function () {
     let author = document.getElementById("author").value;
     let title = document.getElementById("title").value;
     let year = document.getElementById("year").value;
-    getSRUservers().forEach(server => {
+    getAPIs().forEach(server => {
         let query = "";
-        if (author != "") {
-            query = `${server["indices"]["author"]}%20=%20${author}`
+        if (server["type"] == "sru") {
+            if (author != "") {
+                query = `${server["indices"]["author"]}%20=%20${author}`
+            };
+            if (title != "") {
+                if (query != "") {
+                    query = `${query}%20AND%20`
+                }
+                query = `${query}${server["indices"]["title"]}%20=%20${title}`
+            };
+            if (year != "") {
+                if (query != "") {
+                    query = `${query}%20AND%20`
+                }
+                query = `${query}${server["indices"]["year"]}%20=%20${year}`
+            }
+        } else if (server["type"] == "searchapi") {
+            if (author != "") {
+                query = author
+            };
+            if (title != "") {
+                if (query != "") {
+                    query = `${query}+`
+                }
+                query = `${query}${title}`
+            };
+            if (year != "") {
+                if (query != "") {
+                    query = `${query}+`
+                }
+                query = `${query}${year}`
+            }
         };
-        if (title != "") {
-            query = `${query}%20AND%20${server["indices"]["title"]}%20=%20${title}`
-        };
-        if (year != "") {
-            query = `${query}%20AND%20${server["indices"]["year"]}%20=%20${year}`
-        };
-        callSRU(server["url"], query).then(result => handleXML(
+        callAPI(server, query).then(result => handleResponse(
             server["name"],
             server["explain"],
-            result));
+            server["type"],
+            result[0],
+            result[1]));
     })
 }

@@ -1,5 +1,5 @@
-// Return list of SRU servers with metainformation
-function getSRUservers() {
+// Return list of APIs with metainformation
+function getAPIs() {
     return [
         {
             "name": "hpb",
@@ -10,7 +10,8 @@ function getSRUservers() {
                 "author": "dc.creator",
                 "title": "dc.title",
                 "year": "pica.jvu"
-            }
+            },
+            "type": "sru"
         },
         {
             "name": "unicat",
@@ -21,7 +22,8 @@ function getSRUservers() {
                 "author": "author",
                 "title": "title",
                 "year": "year"
-            }
+            },
+            "type": "sru"
         },
         {
             "name": "fu-berlin",
@@ -32,7 +34,8 @@ function getSRUservers() {
                 "author": "alma.creator",
                 "title": "alma.title",
                 "year": "alma.date"
-            }
+            },
+            "type": "sru"
         },
         {
             "name": "bnf",
@@ -43,7 +46,8 @@ function getSRUservers() {
                 "author": "bib.author",
                 "title": "bib.title",
                 "year": "bib.date"
-            }
+            },
+            "type": "sru"
         },
         {
             "name": "dnb",
@@ -54,7 +58,20 @@ function getSRUservers() {
                 "author": "dc.creator",
                 "title": "dc.title",
                 "year": "dc.date"
-            }
+            },
+            "type": "sru"
+        },
+        {
+            "name": "europeana",
+            "url": "https://api.europeana.eu/record/v2/search.json?wskey=apidemo",
+            "explain": "https://api.europeana.eu",
+            "indices":
+            {
+                "author": "dc.creator",
+                "title": "dc.title",
+                "year": "dc.date"
+            },
+            "type": "searchapi"
         }
     ]
 }
@@ -67,10 +84,21 @@ function getSRUservers() {
 // "http://lx2.loc.gov:210/lcdb?version=1.1"
 // -> allemaal onbestaande of blokkeren CORS
 
-async function callSRU(url, query) {
+async function callAPI(server, query) {
     const CORSproxy = "https://corsproxy.io/?"
-    url = `${url}&operation=searchRetrieve&query=${query}&startRecord=1&maximumRecords=10`
-    console.log(url);
+
+    switch (server["type"]) {
+        case "sru": url = `${server["url"]}&operation=searchRetrieve&query=${query}&startRecord=1&maximumRecords=10`
+            break;
+
+        case "searchapi": url = `${server["url"]}&query=${query}`
+            break;
+
+        default: url = ""
+    }
+
+    rawquery = url;
+    console.log(rawquery);
     url = CORSproxy + url
     let response = await fetch(url, {
         method: "GET",
@@ -79,5 +107,5 @@ async function callSRU(url, query) {
         }
     });
     let text = await response.text();
-    return text
+    return [rawquery, text]
 }

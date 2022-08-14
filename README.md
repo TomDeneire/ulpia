@@ -8,15 +8,15 @@ It is named after the [Ulpian library](https://en.wikipedia.org/wiki/Ulpian_Libr
 
 ## How is Ulpia made?
 
-Ulpia is a serverless SRU aggregator with a "back-end" in Go (compiled to WebAssembly) and a front-end in JavaScript and Bootstrap CSS.
+Ulpia is a serverless API aggregator with a "back-end" in Go (compiled to WebAssembly) and a front-end in JavaScript and Bootstrap CSS.
 
 ### Serverless
 
-An application that sends out requests to different SRU servers is typically made in a server-client environment. As I didn't want to set up a separate server for this, I made the application *serverless* by performing the web requests in the browser. This involved the use of a CORS proxy.
+An application that sends out requests to different APIs is typically made in a server-client environment. As I didn't want to set up a separate server for this, I made the application *serverless* by performing the web requests in the browser. This involved the use of a CORS proxy.
 
 ### Go / WebAssembly
 
-Thanks to the integration of Go and WebAssembly, I could use Go for the "back-end" of Ulpia, most notably parsing the XML responses from the different SRU servers, and yielding the results in HTML templates.
+Thanks to the integration of Go and WebAssembly, I could use Go for the "back-end" of Ulpia, most notably parsing the XML or JSON responses from the different APIs, and presenting the results in HTML templates.
 
 ### JavaScript
 
@@ -24,12 +24,13 @@ The actual request is done in JavaScript, making full use of the language's asyn
 
 ## Data
 
-Ulpia currently queries SRU servers of the following datasets:
+Ulpia currently queries APIs (especially SRU servers) of the following datasets:
 
     - CERL Heritage of the Printed Book
     - Bibliothèque national de France
     - Deutsche Nationalbibliothek
     - Unicat -- The Union Catalogue of Belgian Libraries
     - Freie Universität Berlin
+    - Europeana
 
-If you know of any other SRU servers that could be used for this project (provided they do not block CORS proxies), please let me know!
+If you know of any other datasets that could be used for this project (provided they do not block CORS proxies), please let me know!

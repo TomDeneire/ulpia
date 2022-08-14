@@ -2,19 +2,13 @@ package uxml
 
 import (
 	"encoding/xml"
+
+	uhtml "tomdeneire.github.io/ulpia/uhtml"
 )
 
-type Result struct {
-	Titles      []string
-	Dates       []string
-	Authors     []string
-	Identifiers []string
-	Imprints    []string
-}
-
 // Parse XML responses according to specification
-func ParseXML(data []byte, source string) (Result, error) {
-	var result Result
+func ParseXML(data []byte, source string) (uhtml.Result, error) {
+	var result uhtml.Result
 
 	if source == "dnb" {
 		var response DNB
