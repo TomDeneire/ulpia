@@ -131,7 +131,6 @@ func ParseXML(data []byte, source string) (uhtml.Result, error) {
 		}
 		return result, nil
 	}
-
 	return result, nil
 }
 
