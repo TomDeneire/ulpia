@@ -16,7 +16,7 @@ Ulpia is a serverless API aggregator with a "back-end" in Go (compiled to WebAss
 
 ### Serverless
 
-An application that sends out requests to different APIs is typically made in a server-client environment. As I didn't want to set up a separate server for this, I made the application *serverless* by performing the web requests in the browser. This involved the use of a CORS proxy.
+An application that sends out requests to different APIs is typically made in a server-client environment. As I didn't want to set up a separate server for this, I made the application *serverless* by performing the web requests in the browser (using a CORS proxy). So instead of having to maintain a server environment, I can host just this project on GitHub Pages as a static website.
 
 ### Go / WebAssembly
 
