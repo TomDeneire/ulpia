@@ -130,6 +130,29 @@ func ParseXML(data []byte, source string) (uhtml.Result, error) {
 
 		}
 		return result, nil
+	} else if source == "trove" {
+		var response Trove
+		err := xml.Unmarshal(data, &response)
+		if err != nil {
+			return result, err
+		}
+		for _, record := range response.Zone.Records.Work {
+			result.Identifiers = append(result.Identifiers,
+				record.ID)
+
+			result.Titles = append(result.Titles,
+				record.Title)
+
+			result.Dates = append(result.Dates,
+				record.Issued)
+
+			result.Authors = append(result.Authors,
+				record.Contributor)
+
+			result.Imprints = append(result.Imprints,
+				"")
+		}
+		return result, nil
 	}
 	return result, nil
 }

@@ -6,6 +6,10 @@ Ulpia is an aggregator. It scans multiple rare book databases and returns the mo
 
 It is named after the [Ulpian library](https://en.wikipedia.org/wiki/Ulpian_Library), a Roman library founded by the Emperor Trajan in AD 114 and  the major library in the Western World upon the destruction of the Library of Alexandria in the 3rd century.
 
+## How can I use Ulpia?
+
+As an aggregator, Ulpia is a discovery tool meant to locate or identify rare books, rather than get a detailed bibliographical description of them.
+
 ## How is Ulpia made?
 
 Ulpia is a serverless API aggregator with a "back-end" in Go (compiled to WebAssembly) and a front-end in JavaScript and Bootstrap CSS.
@@ -30,6 +34,7 @@ Ulpia currently queries APIs (especially SRU servers) of the following datasets:
     - Bibliothèque national de France
     - Deutsche Nationalbibliothek
     - Unicat -- The Union Catalogue of Belgian Libraries
+    - Trove
     - Google Books
     - Europeana
     - OpenLibrary

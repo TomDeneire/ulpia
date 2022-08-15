@@ -91,6 +91,19 @@ function getAPIs() {
             },
             "type": "q",
             "format": "json"
+        },
+        {
+            "name": "trove",
+            "url": "https://api.trove.nla.gov.au/v2/result?key=r6r5ak9u0l0nkbtg&zone=book",
+            "explain": "https://trove.nla.gov.au/about/create-something/using-api",
+            "indices":
+            {
+                "author": "creator",
+                "title": "title",
+                "year": "date"
+            },
+            "type": "q",
+            "format": "xml"
         }
     ]
 }
@@ -107,12 +120,9 @@ function getAPIs() {
 // to do
 // STCN
 // <http://data.bibliotheken.nl/sparql?default-graph-uri=&query=select+*+where+%7B+%3Fs+schema%3AmainEntityOfPage%2Fschema%3AisPartOf+%3Chttp%3A%2F%2Fdata.bibliotheken.nl%2Fid%2Fdataset%2Fstcn%3E+.+%7D>
-// BSB
-// EDIT 16
-// Trove <https://trove.nla.gov.au/about/create-something/using-api/api-technical-guide#api-search>
-// HathiTrust <https://trove.nla.gov.au/about/create-something/using-api/api-technical-guide#api-search>
+// HathiTrust token aangevraagd
 // WorldCat <https://www.oclc.org/developer/api/oclc-apis/worldcat-search-api.en.html>
-// ISTC
+
 
 async function callAPI(server, query) {
     const CORSproxy = "https://corsproxy.io/?"

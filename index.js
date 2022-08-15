@@ -49,7 +49,10 @@ window.submit = function () {
             if (author != "") {
                 query = author
                 if (server["name"] == "googlebooks") {
-                    query = `inauthor:${query}`
+                    query = `${server["indices"]["author"]}:${author}`
+                };
+                if (server["name"] == "trove") {
+                    query = `${server["indices"]["author"]}%3A${author}`
                 };
             };
             if (title != "") {
@@ -58,7 +61,9 @@ window.submit = function () {
                 }
 
                 if (server["name"] == "googlebooks") {
-                    query = `${query}intitle:${title}`
+                    query = `${query}${server["indices"]["title"]}:${title}`
+                } else if (server["name"] == "trove") {
+                    query = `${query}${server["indices"]["title"]}%3A${title}`
                 } else {
                     query = `${query}${title}`
                 };
@@ -67,7 +72,11 @@ window.submit = function () {
                 if (query != "") {
                     query = `${query}+`
                 }
-                query = `${query}${year}`
+                if (server["name"] == "trove") {
+                    query = `${query}${server["indices"]["year"]}%3A${year}`
+                } else {
+                    query = `${query}${year}`
+                }
             }
         };
         callAPI(server, query).then(result => handleResponse(
