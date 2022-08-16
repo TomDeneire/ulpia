@@ -8,7 +8,16 @@ It is named after the [Ulpian library](https://en.wikipedia.org/wiki/Ulpian_Libr
 
 ## How can I use Ulpia?
 
-As an aggregator, Ulpia is a discovery tool meant to locate or identify rare books, rather than get a detailed bibliographical description of them.
+Ulpia is an aggregator for rare book APIs. With a single click you can search the combined datasets of CERL Heritage of the Printed Book, the Bibliothèque nationale de France, Google Books, and many more (see below). You can combine search terms (author, title, year of publication) and use wildcards.
+
+![ulpia](ulpia.png)
+
+The application returns concise bibliographic data for each match (author, title, imprint, year of publication), but also a link to the original full API response (XML or JSON).
+
+![ulpia](ulpia2.jpeg)
+![ulpia](ulpia3.jpeg)
+
+In this way, Ulpia is a discovery tool, meant to help identify or locate rare books, and start the bibliographic journey, rather than get detailed metadata (for which the individual databases are better suited).
 
 ## How is Ulpia made?
 
