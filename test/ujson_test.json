@@ -1,0 +1,27 @@
+{"Time":"2022-08-16T14:09:06.760042316+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestEuropeanaParse0"}
+{"Time":"2022-08-16T14:09:06.760146403+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestEuropeanaParse0","Output":"=== RUN   TestEuropeanaParse0\n"}
+{"Time":"2022-08-16T14:09:06.760160783+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestEuropeanaParse0","Output":"--- PASS: TestEuropeanaParse0 (0.00s)\n"}
+{"Time":"2022-08-16T14:09:06.76016882+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestEuropeanaParse0","Elapsed":0}
+{"Time":"2022-08-16T14:09:06.760177867+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestEuropeanaParse1"}
+{"Time":"2022-08-16T14:09:06.760185938+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestEuropeanaParse1","Output":"=== RUN   TestEuropeanaParse1\n"}
+{"Time":"2022-08-16T14:09:06.760194233+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestEuropeanaParse1","Output":"--- PASS: TestEuropeanaParse1 (0.00s)\n"}
+{"Time":"2022-08-16T14:09:06.760202118+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestEuropeanaParse1","Elapsed":0}
+{"Time":"2022-08-16T14:09:06.760209552+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestGoogleBooksParse0"}
+{"Time":"2022-08-16T14:09:06.760216958+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestGoogleBooksParse0","Output":"=== RUN   TestGoogleBooksParse0\n"}
+{"Time":"2022-08-16T14:09:06.760225496+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestGoogleBooksParse0","Output":"--- PASS: TestGoogleBooksParse0 (0.00s)\n"}
+{"Time":"2022-08-16T14:09:06.760242507+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestGoogleBooksParse0","Elapsed":0}
+{"Time":"2022-08-16T14:09:06.760258167+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestGoogleBooksParse1"}
+{"Time":"2022-08-16T14:09:06.760265187+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestGoogleBooksParse1","Output":"=== RUN   TestGoogleBooksParse1\n"}
+{"Time":"2022-08-16T14:09:06.76027415+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestGoogleBooksParse1","Output":"--- PASS: TestGoogleBooksParse1 (0.00s)\n"}
+{"Time":"2022-08-16T14:09:06.760284804+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestGoogleBooksParse1","Elapsed":0}
+{"Time":"2022-08-16T14:09:06.760293062+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestOpenLibraryParse0"}
+{"Time":"2022-08-16T14:09:06.76030036+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestOpenLibraryParse0","Output":"=== RUN   TestOpenLibraryParse0\n"}
+{"Time":"2022-08-16T14:09:06.760310508+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestOpenLibraryParse0","Output":"--- PASS: TestOpenLibraryParse0 (0.00s)\n"}
+{"Time":"2022-08-16T14:09:06.76032091+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestOpenLibraryParse0","Elapsed":0}
+{"Time":"2022-08-16T14:09:06.760328832+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestOpenLibraryParse1"}
+{"Time":"2022-08-16T14:09:06.760336265+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestOpenLibraryParse1","Output":"=== RUN   TestOpenLibraryParse1\n"}
+{"Time":"2022-08-16T14:09:06.760344623+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestOpenLibraryParse1","Output":"--- PASS: TestOpenLibraryParse1 (0.00s)\n"}
+{"Time":"2022-08-16T14:09:06.760352336+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/ujson","Test":"TestOpenLibraryParse1","Elapsed":0}
+{"Time":"2022-08-16T14:09:06.760359701+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Output":"PASS\n"}
+{"Time":"2022-08-16T14:09:06.760376164+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/ujson","Output":"ok  \ttomdeneire.github.io/ulpia/ujson\t(cached)\n"}
+{"Time":"2022-08-16T14:09:06.760390247+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/ujson","Elapsed":0}
