@@ -3,7 +3,7 @@ function getAPIs() {
     return [
         {
             "name": "hpb",
-            "url": "https://sru.gbv.de/hpb?version=2.0&recordSchema=dc",
+            "url": "https://sru.gbv.de/hpb?version=2.0&recordSchema=dc&maximumRecords=100",
             "explain": "https://sru.gbv.de/hpb?version=2.0&operation=explain",
             "indices":
             {
