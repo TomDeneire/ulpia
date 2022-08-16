@@ -22,7 +22,7 @@ func TestEuropeanaParse1(t *testing.T) {
 	var response Europeana
 	_ = json.Unmarshal(europeanaJSON, &response)
 	result := response.TotalResults
-	expected := 25
+	expected := 7
 	if result != expected {
 		t.Errorf(fmt.Sprintf("\nResult: \n[%v]\nExpected: \n[%v]\n", result, expected))
 	}

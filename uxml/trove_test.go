@@ -39,7 +39,7 @@ var troveXML = []byte(`
 </work>
 <work id="23463101" url="/work/23463101">
 <troveUrl>https://trove.nla.gov.au/work/23463101</troveUrl>
-<title>Ivsti Lipsi Diva sichemiensis siue aspricollis : noua eius Beneficia & Admiranda</title>
+<title>Ivsti Lipsi Diva sichemiensis siue aspricollis : noua eius Beneficia et Admiranda</title>
 <contributor>Lipsius, Justus, 1547-1606</contributor>
 <issued>1606</issued>
 <type>Book</type>
@@ -47,11 +47,11 @@ var troveXML = []byte(`
 <versionCount>1</versionCount>
 <hasCorrections>N</hasCorrections>
 <relevance score="78.30725">very relevant</relevance>
-<snippet>Ivsti Lipsi Diva sichemiensis siue aspricollis : noua eius Beneficia & <b>Admiranda</b>.</snippet>
+<snippet>Ivsti Lipsi Diva sichemiensis siue aspricollis : noua eius Beneficia et <b>Admiranda</b>.</snippet>
 </work>
 <work id="245452508" url="/work/245452508">
 <troveUrl>https://trove.nla.gov.au/work/245452508</troveUrl>
-<title>Iusti LipsI Diua Sichemiensis siue Aspricollis : noua eius beneficia & admiranda</title>
+<title>Iusti LipsI Diua Sichemiensis siue Aspricollis : noua eius beneficia et admiranda</title>
 <contributor>Lipsius, Justus, 1547-1606</contributor>
 <issued>1620</issued>
 <type>Book</type>
@@ -59,7 +59,7 @@ var troveXML = []byte(`
 <versionCount>1</versionCount>
 <hasCorrections>N</hasCorrections>
 <relevance score="73.48471">very relevant</relevance>
-<snippet>Iusti LipsI Diua Sichemiensis siue Aspricollis : noua eius beneficia & <b>admiranda</b>.</snippet>
+<snippet>Iusti LipsI Diua Sichemiensis siue Aspricollis : noua eius beneficia et <b>admiranda</b>.</snippet>
 </work>
 </records>
 </zone>

@@ -182,7 +182,7 @@ func TestOpenLibraryParse1(t *testing.T) {
 	var response OpenLibrary
 	_ = json.Unmarshal(openlibraryJSON, &response)
 	result := response.NumFound
-	expected := 25
+	expected := 2
 	if result != expected {
 		t.Errorf(fmt.Sprintf("\nResult: \n[%v]\nExpected: \n[%v]\n", result, expected))
 	}
