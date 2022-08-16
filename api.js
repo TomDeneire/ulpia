@@ -139,7 +139,7 @@ async function callAPI(server, query) {
         default: url = ""
     }
 
-    rawquery = url;
+    let rawquery = url;
     console.log(rawquery);
     url = CORSproxy + url
     let response = await fetch(url, {
