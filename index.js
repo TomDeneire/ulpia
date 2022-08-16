@@ -27,6 +27,9 @@ window.submit = function () {
     let author = document.getElementById("author").value;
     let title = document.getElementById("title").value;
     let year = document.getElementById("year").value;
+    if (author + title + year == "") {
+        return
+    }
     getAPIs().forEach(server => {
         let query = "";
         if (server["type"] == "sru") {
