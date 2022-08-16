@@ -250,7 +250,7 @@ func TestTroveParse0(t *testing.T) {
 func TestTroveParse1(t *testing.T) {
 	var response Trove
 	_ = xml.Unmarshal(troveXML, &response)
-	result := response.Total
+	result := response.NumberOfRecords
 	expected := "18"
 	if result != expected {
 		t.Errorf(fmt.Sprintf("\nResult: \n[%s]\nExpected: \n[%s]\n", result, expected))
