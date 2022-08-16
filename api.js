@@ -114,13 +114,12 @@ function getAPIs() {
 // "http://bvpb.mcu.es/i18n/sru/sru.cmd?version=1.1",
 // "http://lx2.loc.gov:210/lcdb?version=1.1"
 // https://gallica.bnf.fr/SRU?version=1.2&recordSchema=dc&operation=searchRetrieve&query=dc.title=%22admiranda%22
-// -> allemaal onbestaande of blokkeren CORS
+// -> unexisting or blocking CORS proxy
 
 
 // to do
 // STCN
 // <http://data.bibliotheken.nl/sparql?default-graph-uri=&query=select+*+where+%7B+%3Fs+schema%3AmainEntityOfPage%2Fschema%3AisPartOf+%3Chttp%3A%2F%2Fdata.bibliotheken.nl%2Fid%2Fdataset%2Fstcn%3E+.+%7D>
-// HathiTrust token aangevraagd
 // WorldCat <https://www.oclc.org/developer/api/oclc-apis/worldcat-search-api.en.html>
 
 
