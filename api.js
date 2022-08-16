@@ -127,7 +127,7 @@ async function callAPI(server, query) {
     const CORSproxy = "https://corsproxy.io/?"
 
     switch (server["type"]) {
-        case "sru": url = `${server["url"]}&operation=searchRetrieve&query=${query}&startRecord=1&maximumRecords=10`
+        case "sru": url = `${server["url"]}&operation=searchRetrieve&query=${query}&startRecord=1`
             break;
 
         case "query": url = `${server["url"]}&query=${query}`
