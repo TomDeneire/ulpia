@@ -812,8 +812,8 @@ func TestGoogleBooksParse0(t *testing.T) {
 func TestGoogleBooksParse1(t *testing.T) {
 	var response GoogleBooks
 	_ = json.Unmarshal(googlebooksJSON, &response)
-	result := response.totalItems
-	expected := 25
+	result := response.TotalItems
+	expected := 872
 	if result != expected {
 		t.Errorf(fmt.Sprintf("\nResult: \n[%v]\nExpected: \n[%v]\n", result, expected))
 	}
