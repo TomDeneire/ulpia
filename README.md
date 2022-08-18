@@ -1,8 +1,10 @@
 # Ulpia
 
+[https://tomdeneire.github.io/ulpia](https://tomdeneire.github.io/ulpia)
+
 ## What is Ulpia?
 
-Ulpia is an aggregator. It scans multiple rare book databases and returns the most relevant results.
+[Ulpia](https://tomdeneire.github.io/ulpia) is an aggregator. It scans multiple rare book databases and returns the most relevant results.
 
 It is named after the [Ulpian library](https://en.wikipedia.org/wiki/Ulpian_Library), a Roman library founded by the Emperor Trajan in AD 114 and  the major library in the Western World upon the destruction of the Library of Alexandria in the 3rd century.
 
