@@ -90,16 +90,14 @@ func ParseXML(data []byte, source string) (uhtml.Result, error) {
 		}
 		for _, record := range response.Records.Record {
 
-			for _, identifier := range record.RecordData.Dc.Identifier {
-				result.Identifiers = append(result.Identifiers, identifier.Text+"\n")
-			}
+			result.Identifiers = append(result.Identifiers,
+				loopConCatS4(record.RecordData.Dc.Identifier))
 
 			result.Titles = append(result.Titles,
 				record.RecordData.Dc.Title.Text)
 
-			for _, author := range record.RecordData.Dc.Creator {
-				result.Authors = append(result.Authors, author.Text+"\n")
-			}
+			result.Authors = append(result.Authors,
+				loopConCatS4(record.RecordData.Dc.Creator))
 
 			result.Dates = append(result.Dates, "")
 
@@ -208,6 +206,17 @@ func loopConCatS2(data []struct {
 func loopConCatS3(data []struct {
 	Text     string "xml:\",chardata\""
 	Datatype string "xml:\"datatype,attr\""
+}) string {
+	var result string
+	for _, item := range data {
+		result += "\n" + item.Text
+	}
+	return result
+}
+
+func loopConCatS4(data []struct {
+	Text  string `xml:",chardata"`
+	Xmlns string `xml:"xmlns,attr"`
 }) string {
 	var result string
 	for _, item := range data {
