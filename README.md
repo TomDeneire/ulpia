@@ -41,14 +41,15 @@ The actual request is done in JavaScript, making full use of the language's asyn
 
 Ulpia currently queries APIs (especially SRU servers) of the following datasets:
 
-- CERL Heritage of the Printed Book
+- Anet
 - Bibliothèque national de France
+- CERL Heritage of the Printed Book
 - Deutsche Nationalbibliothek
-- Unicat -- The Union Catalogue of Belgian Libraries
-- Trove
-- Google Books
 - Europeana
-- OpenLibrary
 - Freie Universität Berlin
+- Google Books
+- OpenLibrary
+- Trove
+- Unicat -- The Union Catalogue of Belgian Libraries
 
 If you know of any other datasets that could be used for this project (provided they do not block CORS proxies), please let me know!
