@@ -82,6 +82,31 @@ func ParseXML(data []byte, source string) (uhtml.Result, error) {
 				record.RecordData.Dc.Publisher)
 		}
 		return result, nil
+	} else if source == "anet" {
+		var response Anet
+		err := xml.Unmarshal(data, &response)
+		if err != nil {
+			return result, err
+		}
+		for _, record := range response.Records.Record {
+
+			for _, identifier := range record.RecordData.Dc.Identifier {
+				result.Identifiers = append(result.Identifiers, identifier.Text)
+			}
+
+			result.Titles = append(result.Titles,
+				record.RecordData.Dc.Title.Text)
+
+			for _, author := range record.RecordData.Dc.Creator {
+				result.Authors = append(result.Authors, author.Text)
+			}
+
+			result.Dates = append(result.Dates, "")
+
+			result.Imprints = append(result.Imprints,
+				record.RecordData.Dc.Publisher.Text)
+		}
+		return result, nil
 	} else if source == "fu-berlin" {
 		var response FUBerlin
 		err := xml.Unmarshal(data, &response)

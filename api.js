@@ -2,6 +2,18 @@
 function getAPIs() {
   return [
     {
+      name: "anet",
+      url: "https://anet.be/sru/lvd?version=1.1&recordSchema=dc&maximumRecords=100",
+      explain: "https://anet.be/sru/lvd?version=1.1&operation=explain",
+      indices: {
+        author: "creator",
+        title: "title",
+        year: "date",
+      },
+      type: "sru",
+      format: "xml",
+    },
+    {
       name: "hpb",
       url: "https://sru.k10plus.de/hpb?version=2.0&recordSchema=dc&maximumRecords=100",
       explain: "https://sru.k10plus.de/hpb?version=2.0&operation=explain",
@@ -136,7 +148,6 @@ async function callAPI(server, query) {
   }
 
   let rawquery = url;
-  console.log(rawquery);
   url = CORSproxy + url;
   let response = await fetch(url, {
     method: "GET",

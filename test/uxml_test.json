@@ -1,55 +1,56 @@
-{"Time":"2022-08-18T11:36:22.504833284+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse0"}
-{"Time":"2022-08-18T11:36:22.504958885+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse0","Output":"=== RUN   TestBNFParse0\n"}
-{"Time":"2022-08-18T11:36:22.505936787+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse0","Output":"--- PASS: TestBNFParse0 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.505961912+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse0","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.505972357+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse1"}
-{"Time":"2022-08-18T11:36:22.505980364+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse1","Output":"=== RUN   TestBNFParse1\n"}
-{"Time":"2022-08-18T11:36:22.507424016+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse1","Output":"--- PASS: TestBNFParse1 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.50745892+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse1","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.507465712+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse0"}
-{"Time":"2022-08-18T11:36:22.507469777+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse0","Output":"=== RUN   TestDNBParse0\n"}
-{"Time":"2022-08-18T11:36:22.508675413+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse0","Output":"--- PASS: TestDNBParse0 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.508703898+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse0","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.50871033+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse1"}
-{"Time":"2022-08-18T11:36:22.508714342+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse1","Output":"=== RUN   TestDNBParse1\n"}
-{"Time":"2022-08-18T11:36:22.50962827+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse1","Output":"--- PASS: TestDNBParse1 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.50966971+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse1","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.509677726+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse2"}
-{"Time":"2022-08-18T11:36:22.509682297+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse2","Output":"=== RUN   TestDNBParse2\n"}
-{"Time":"2022-08-18T11:36:22.510500824+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse2","Output":"--- PASS: TestDNBParse2 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.510533134+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse2","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.510539598+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse0"}
-{"Time":"2022-08-18T11:36:22.510543368+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse0","Output":"=== RUN   TestFUBerlinParse0\n"}
-{"Time":"2022-08-18T11:36:22.511436261+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse0","Output":"--- PASS: TestFUBerlinParse0 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.511474938+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse0","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.511486224+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse1"}
-{"Time":"2022-08-18T11:36:22.511490952+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse1","Output":"=== RUN   TestFUBerlinParse1\n"}
-{"Time":"2022-08-18T11:36:22.512190972+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse1","Output":"--- PASS: TestFUBerlinParse1 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.512245156+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse1","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.51225698+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse0"}
-{"Time":"2022-08-18T11:36:22.512268026+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse0","Output":"=== RUN   TestHPBParse0\n"}
-{"Time":"2022-08-18T11:36:22.514403353+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse0","Output":"--- PASS: TestHPBParse0 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.514443292+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse0","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.514451455+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse1"}
-{"Time":"2022-08-18T11:36:22.51445685+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse1","Output":"=== RUN   TestHPBParse1\n"}
-{"Time":"2022-08-18T11:36:22.515930305+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse1","Output":"--- PASS: TestHPBParse1 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.515963574+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse1","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.515971133+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse0"}
-{"Time":"2022-08-18T11:36:22.51597534+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse0","Output":"=== RUN   TestTroveParse0\n"}
-{"Time":"2022-08-18T11:36:22.516198019+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse0","Output":"--- PASS: TestTroveParse0 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.516216039+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse0","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.516222333+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse1"}
-{"Time":"2022-08-18T11:36:22.516226527+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse1","Output":"=== RUN   TestTroveParse1\n"}
-{"Time":"2022-08-18T11:36:22.51644022+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse1","Output":"--- PASS: TestTroveParse1 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.516450764+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse1","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.51645516+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse0"}
-{"Time":"2022-08-18T11:36:22.516458871+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse0","Output":"=== RUN   TestUnicatParse0\n"}
-{"Time":"2022-08-18T11:36:22.517515466+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse0","Output":"--- PASS: TestUnicatParse0 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.51755003+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse0","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.517557326+02:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse1"}
-{"Time":"2022-08-18T11:36:22.517561657+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse1","Output":"=== RUN   TestUnicatParse1\n"}
-{"Time":"2022-08-18T11:36:22.518344774+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse1","Output":"--- PASS: TestUnicatParse1 (0.00s)\n"}
-{"Time":"2022-08-18T11:36:22.51837073+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse1","Elapsed":0}
-{"Time":"2022-08-18T11:36:22.518380541+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Output":"PASS\n"}
-{"Time":"2022-08-18T11:36:22.518833776+02:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Output":"ok  \ttomdeneire.github.io/ulpia/uxml\t0.015s\n"}
-{"Time":"2022-08-18T11:36:22.51932984+02:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Elapsed":0.016}
+{"Time":"2023-02-25T09:51:05.406804864+01:00","Action":"start","Package":"tomdeneire.github.io/ulpia/uxml"}
+{"Time":"2023-02-25T09:51:05.407087809+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse0"}
+{"Time":"2023-02-25T09:51:05.407105739+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse0","Output":"=== RUN   TestBNFParse0\n"}
+{"Time":"2023-02-25T09:51:05.407130461+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse0","Output":"--- PASS: TestBNFParse0 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.407140145+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse0","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407149984+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse1"}
+{"Time":"2023-02-25T09:51:05.407156766+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse1","Output":"=== RUN   TestBNFParse1\n"}
+{"Time":"2023-02-25T09:51:05.407164765+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse1","Output":"--- PASS: TestBNFParse1 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.4071718+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestBNFParse1","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407178812+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse0"}
+{"Time":"2023-02-25T09:51:05.407185545+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse0","Output":"=== RUN   TestDNBParse0\n"}
+{"Time":"2023-02-25T09:51:05.40719317+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse0","Output":"--- PASS: TestDNBParse0 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.407262378+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse0","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407349755+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse1"}
+{"Time":"2023-02-25T09:51:05.407500182+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse1","Output":"=== RUN   TestDNBParse1\n"}
+{"Time":"2023-02-25T09:51:05.407519028+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse1","Output":"--- PASS: TestDNBParse1 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.407527879+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse1","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407535873+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse2"}
+{"Time":"2023-02-25T09:51:05.407542415+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse2","Output":"=== RUN   TestDNBParse2\n"}
+{"Time":"2023-02-25T09:51:05.407550035+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse2","Output":"--- PASS: TestDNBParse2 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.407556832+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestDNBParse2","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407563572+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse0"}
+{"Time":"2023-02-25T09:51:05.407569422+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse0","Output":"=== RUN   TestFUBerlinParse0\n"}
+{"Time":"2023-02-25T09:51:05.407577298+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse0","Output":"--- PASS: TestFUBerlinParse0 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.407584123+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse0","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407592138+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse1"}
+{"Time":"2023-02-25T09:51:05.407598378+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse1","Output":"=== RUN   TestFUBerlinParse1\n"}
+{"Time":"2023-02-25T09:51:05.407614387+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse1","Output":"--- PASS: TestFUBerlinParse1 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.407622366+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestFUBerlinParse1","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407630442+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse0"}
+{"Time":"2023-02-25T09:51:05.40763485+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse0","Output":"=== RUN   TestHPBParse0\n"}
+{"Time":"2023-02-25T09:51:05.407639736+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse0","Output":"--- PASS: TestHPBParse0 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.407644262+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse0","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407648676+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse1"}
+{"Time":"2023-02-25T09:51:05.407652811+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse1","Output":"=== RUN   TestHPBParse1\n"}
+{"Time":"2023-02-25T09:51:05.407657546+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse1","Output":"--- PASS: TestHPBParse1 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.407662018+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestHPBParse1","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407666383+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse0"}
+{"Time":"2023-02-25T09:51:05.407670595+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse0","Output":"=== RUN   TestTroveParse0\n"}
+{"Time":"2023-02-25T09:51:05.407676042+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse0","Output":"--- PASS: TestTroveParse0 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.407680561+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse0","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407685074+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse1"}
+{"Time":"2023-02-25T09:51:05.407689456+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse1","Output":"=== RUN   TestTroveParse1\n"}
+{"Time":"2023-02-25T09:51:05.407694226+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse1","Output":"--- PASS: TestTroveParse1 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.407698594+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestTroveParse1","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407703012+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse0"}
+{"Time":"2023-02-25T09:51:05.407707125+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse0","Output":"=== RUN   TestUnicatParse0\n"}
+{"Time":"2023-02-25T09:51:05.407711902+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse0","Output":"--- PASS: TestUnicatParse0 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.407717583+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse0","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407727322+01:00","Action":"run","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse1"}
+{"Time":"2023-02-25T09:51:05.40773525+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse1","Output":"=== RUN   TestUnicatParse1\n"}
+{"Time":"2023-02-25T09:51:05.40775068+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse1","Output":"--- PASS: TestUnicatParse1 (0.00s)\n"}
+{"Time":"2023-02-25T09:51:05.4077635+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Test":"TestUnicatParse1","Elapsed":0}
+{"Time":"2023-02-25T09:51:05.407781095+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Output":"PASS\n"}
+{"Time":"2023-02-25T09:51:05.407793768+01:00","Action":"output","Package":"tomdeneire.github.io/ulpia/uxml","Output":"ok  \ttomdeneire.github.io/ulpia/uxml\t(cached)\n"}
+{"Time":"2023-02-25T09:51:05.407808783+01:00","Action":"pass","Package":"tomdeneire.github.io/ulpia/uxml","Elapsed":0.001}
