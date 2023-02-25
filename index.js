@@ -22,7 +22,7 @@ WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then(
 
 // Global submit function
 // Perform API calls and send response to Go
-window.submit = function () {
+window.submit = function() {
     document.getElementById("result").innerHTML = "";
     let author = document.getElementById("author").value;
     let title = document.getElementById("title").value;
