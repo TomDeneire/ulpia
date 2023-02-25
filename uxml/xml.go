@@ -91,14 +91,14 @@ func ParseXML(data []byte, source string) (uhtml.Result, error) {
 		for _, record := range response.Records.Record {
 
 			for _, identifier := range record.RecordData.Dc.Identifier {
-				result.Identifiers = append(result.Identifiers, identifier.Text)
+				result.Identifiers = append(result.Identifiers, identifier.Text+"\n")
 			}
 
 			result.Titles = append(result.Titles,
 				record.RecordData.Dc.Title.Text)
 
 			for _, author := range record.RecordData.Dc.Creator {
-				result.Authors = append(result.Authors, author.Text)
+				result.Authors = append(result.Authors, author.Text+"\n")
 			}
 
 			result.Dates = append(result.Dates, "")
